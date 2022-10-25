@@ -23,7 +23,7 @@ from math import gcd
 
 
 
-os.chdir('/home/giriraj/Documents/ncode/python/paper2_codes')
+os.chdir('~/paper2_codes') #set current directory here
 
 cwd = os.getcwd()
 
@@ -102,7 +102,7 @@ def factorization(n):
 
 #%%
 
-'''read main file here'''
+'''read main file here, comment every file name except the one to be processed'''
 #fname = 'GSE158264_coex_net'
 fname = 'tdp43_coex_net'
 #fname = 'sod_coex_net'
