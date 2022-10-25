@@ -91,18 +91,20 @@ fnCoexNet = robjects.r['processData']
 #%%
 
 
-os.chdir('/home/giriraj/Documents/ncode/python/paper2_codes/')
+os.chdir('~/paper2_codes/') # set the current directory here
 cwd = os.getcwd()
 
 read_csv = robjects.r['read.csv']
 
+
+#NOTE: To process individual files: un-comment the file to be processed and comment out the rest of the names.
 
 #fname = 'modified_sod_expData.csv'; fname1 = 'sod_coex_net.csv'
 #fname = 'modified_tdp43_expData.csv'; fname1 = 'tdp43_coex_net.csv'
 #fname = 'GSE145677_DEGs.csv'; fname1 = 'GSE145677_coex_net.csv'
 #fname = 'GSE158264_DEGs.csv'; fname1 = 'GSE158264_coex_net.csv'
 fname = 'GSE40438_DEGs.csv'; fname1 = 'GSE40438_coex_net.csv'
-#fname = 'GSE87385_DEGs.csv'; fname1 = 'GSE87385_coex_net.csv': does not compute due to RRuntime-error. Ignored
+
 
 
 def coex_net_generator(fname,cwd,coexfile):
