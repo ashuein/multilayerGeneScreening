@@ -20,14 +20,13 @@ import ClusterEnsembles as CE
 import time
 import numpy as np
 
-os.chdir('/home/giriraj/Documents/ncode/python/paper2_codes')
+os.chdir('~/paper2_codes') # set current directory here
 
 cwd = os.getcwd()
 
 '''
 First you prune the coexpression network and then create the subnetworks for PPI, TF and ncRNA networks for the same
-This is being done only for SOD1 and TDp43 as they are only ones which will be analyzed later on as others dont
-form a good network to analyze.
+This is being done only for SOD1 and TDp43 as they are only ones which will be analyzed later.
 
 '''
 
@@ -355,7 +354,8 @@ Grid Search methodology will be used
    
 with open(cwd+'/datasets/begin_nets','rb') as fp:
     rna_net,tf_net,ppi_net = pk.load(fp)
-    
+ 
+#NOTE: Comment every name except the file id to be processed.
 #gene_file = 'GSE158264_coex_net.csv' #should be string format, will be used to save final community file name
 #gene_file = 'tdp43_coex_net.csv'
 #gene_file = 'sod_coex_net.csv'
